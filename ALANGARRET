@@ -1,0 +1,14 @@
+include 'path/to/mailin-api/Mailin.php';
+$mailin = new Mailin('AlanGarret@web.de', '2S6J3fywjXsDvmY1');
+$mailin->
+addTo('AlanGarret@web.de', 'Gerwin Michels')->
+setFrom('AlanGarret@web.de', 'Gerwin Michels')->
+setReplyTo('AlanGarret@web.de','Gerwin Michels')->
+setSubject('Geben Sie hier den Betreff ein.')->
+setText('Guten Tag')->
+setHtml('<strong>Guten Tag</strong>');
+$res = $mailin->send();
+/**
+Die Erfolgsnachricht wird in dieser Form erneut gesendet.:
+{'result' => true, 'message' => 'E-Mail gesendet'}
+*/
